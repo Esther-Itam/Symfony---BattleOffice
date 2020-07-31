@@ -17,4 +17,5 @@ return [
     '_profiler_exception_css' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::stylesheet'], [], [['text', '/exception.css'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
     'landing_page' => [[], ['_controller' => 'App\\Controller\\LandingPageController::index'], [], [['text', '/']], [], []],
     'confirmation' => [[], ['_controller' => 'App\\Controller\\LandingPageController::confirmation'], [], [['text', '/confirmation']], [], []],
+    'payment' => [[], ['_controller' => 'App\\Controller\\PaymentController::index'], [], [['text', '/payment']], [], []],
 ];

@@ -15,6 +15,7 @@ return [
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
         '/' => [[['_route' => 'landing_page', '_controller' => 'App\\Controller\\LandingPageController::index'], null, null, null, false, false, null]],
         '/confirmation' => [[['_route' => 'confirmation', '_controller' => 'App\\Controller\\LandingPageController::confirmation'], null, null, null, false, false, null]],
+        '/payment' => [[['_route' => 'payment', '_controller' => 'App\\Controller\\PaymentController::index'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'
