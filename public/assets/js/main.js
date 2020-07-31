@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 //API
-var stripe = Stripe('pk_test_51H2XPXKI1XZO9WyCIJHn2B5FDxh81xUQlkchs7chgI4mQjpSlAADnQqju15Rkc14bOt5TwXZvnlifR428lhsf7sh00uXMJKJ7X');
+var stripe = Stripe('pk_test_51H2ZbWBOL1Ug5bIFbEG3AxQH5mzYeWclWNPwBJMqqqovIxpxRRftFjJf75FcjQRB7nBYn9vR2toaqWYLXhdUOmAp00cInBzdpX');
 
 // Create an instance of Elements.
 var elements = stripe.elements();

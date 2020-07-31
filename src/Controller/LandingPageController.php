@@ -81,7 +81,7 @@ class LandingPageController extends AbstractController
         // $content = '{"id":521583, "name":"symfony-docs", ...}'
         $content = $response->toArray();
         // $content = ['id' => 521583, 'name' => 'symfony-docs', ...]
-
+            return $content;
     } 
     
     
@@ -133,9 +133,16 @@ class LandingPageController extends AbstractController
             $entityManager->persist($entity['Order']);
             $entityManager->flush();
 
-            $this->apiOrder($entity['Order']);
+            $api_response = $this->apiOrder($entity['Order']);
+            $api_id= $api_response['order_id'];
+            $entity["Order"]->setApiId($api_id);
+            $entityManager->persist($entity['Order']);
+            $entityManager->flush();
+
+            //recuperer l id api puis set order api id 
+            // persist order puis flush order 
             
-            return $this->redirectToRoute('payment');
+            return $this->redirectToRoute('payment', ['id'=> $entity['Order']->getId()]);
         }    
 
         return $this->render('landing_page/index_new.html.twig', [

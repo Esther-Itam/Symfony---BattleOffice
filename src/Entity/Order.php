@@ -33,6 +33,16 @@ class Order
      */
     private $Product;
 
+    /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    private $api_id;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $status;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -77,5 +87,29 @@ class Order
     public  function __toString()
     {
         return $this->getUser();
+    }
+
+    public function getApiId(): ?int
+    {
+        return $this->api_id;
+    }
+
+    public function setApiId(?int $api_id): self
+    {
+        $this->api_id = $api_id;
+
+        return $this;
+    }
+
+    public function getStatus(): ?string
+    {
+        return $this->status;
+    }
+
+    public function setStatus(?string $status): self
+    {
+        $this->status = $status;
+
+        return $this;
     }
 }
